@@ -19,10 +19,29 @@ public class Bowling : MonoBehaviour
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
             ShootBall();
+
+        if (Keyboard.current.rightArrowKey.isPressed
+            || Keyboard.current.dKey.isPressed)
+            Moveright();
+
+
+        if (Keyboard.current.leftArrowKey.isPressed
+            || Keyboard.current.aKey.isPressed)
+            Moveleft();
     }
 
     private void ShootBall()
     {
         rb.AddForce(Vector3.forward * ForcePower, ForceMode.Impulse);
+    }
+
+    private void Moveright()
+    {
+        transform.position += new Vector3(1f, 0f, 0f) * Time.deltaTime;
+    }
+
+    private void Moveleft()
+    {
+        transform.position += new Vector3(-1f, 0f, 0f) * Time.deltaTime;
     }
 }

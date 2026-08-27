@@ -1153,6 +1153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61b46c6981e2ce4ca505f29c609862b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bowling
+  rb: {fileID: 0}
+  ForcePower: 70
 --- !u!135 &1757752287
 SphereCollider:
   m_ObjectHideFlags: 0
